@@ -1,0 +1,9 @@
+name: clipper
+version: 0.1.0
+
+authors:
+  - Danny Ben Shitrit <db@dannyben.com>
+
+crystal: 0.31.1
+
+license: MIT
