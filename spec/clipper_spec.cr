@@ -10,7 +10,7 @@ describe Clipper do
       subject.arg "command"
 
       options = subject.parse ["--one", "-n", "bob"]
-      options.should eq({ "--one" => true, "--two" => false, "--name" => "bob", "command" => false})
+      options.should eq({"--one" => true, "--two" => false, "--name" => "bob", "command" => false})
     end
   end
 
@@ -103,9 +103,7 @@ describe Clipper do
           options["--port"].should eq "1234"
         end
       end
-
     end
-
   end
 
   describe "#arg" do
@@ -119,7 +117,7 @@ describe Clipper do
 
     context "when it is provided as input" do
       options = subject.parse ["download"]
-      options["command"].should eq "download"      
+      options["command"].should eq "download"
     end
   end
 end

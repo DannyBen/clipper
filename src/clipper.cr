@@ -1,8 +1,6 @@
 require "option_parser"
 
 class Clipper
-  VERSION = "0.1.0"
-
   def flag(long, short = nil, default = false)
     key = long.split(' ').first
     input[key] = default
@@ -51,5 +49,4 @@ class Clipper
   protected def parser
     @parser ||= OptionParser.new
   end
-
 end
