@@ -1,5 +1,7 @@
 name: clipper
 version: 0.1.0
+description: Pure Command Line Arguments Parser
+repository: https://github.com/dannyben/clipper
 
 authors:
   - Danny Ben Shitrit <db@dannyben.com>
