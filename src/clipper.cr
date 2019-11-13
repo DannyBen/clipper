@@ -14,6 +14,7 @@ class Clipper
 
   def parse(args = [] of String)
     args = args.dup
+    parser.invalid_option { }
     parser.parse args
     append_named_args args
     input

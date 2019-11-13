@@ -12,6 +12,16 @@ describe Clipper do
       options = subject.parse ["--one", "-n", "bob"]
       options.should eq({"--one" => true, "--two" => false, "--name" => "bob", "command" => false})
     end
+
+    context "when an invalid option is provided" do
+      it "ignores it" do
+        subject = Clipper.new
+        subject.flag "--one"
+
+        options = subject.parse ["--one", "--two"]
+        options.should eq({"--one" => true})
+      end
+    end
   end
 
   describe "#flag" do
