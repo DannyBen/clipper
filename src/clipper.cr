@@ -3,10 +3,6 @@ require "option_parser"
 class Clipper
   getter :commands
 
-  def initialize
-    @commands = {} of String => Proc(Array(String), Nil)
-  end
-
   def flag(long, short = nil, default = false)
     key = long.split(' ').first
     input[key] = default
@@ -18,26 +14,10 @@ class Clipper
     arg_keys << name
   end
 
-  def command(name, &handler : Array(String) ->)
-    commands[name] = handler
-  end
-
   def parse(args = [] of String)
     args = args.dup
     parser.invalid_option { }
-
     parser.parse args
-
-    if args.size > 0 && commands.size > 0
-      input = args[0]
-      commands.each do |command, block|
-        if command == input
-          args.shift
-          block.call args
-        end
-      end
-    end
-
     append_named_args args
     input
   end
