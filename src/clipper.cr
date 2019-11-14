@@ -9,7 +9,7 @@ class Clipper
   # using the *long* key.
   #
   #     clipper = Clipper.new
-  #     clipper.flag "--port PORT", "-p", default: 3000
+  #     clipper.flag "--port PORT", "-p PORT", default: 3000
   #     options = clipper.parse ARGV
   #     options["--port"]  # => "3000"
   #
