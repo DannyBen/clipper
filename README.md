@@ -1,5 +1,4 @@
-Clipper - Pure Command Line Arguments Parser
-==================================================  
+# Clipper - Pure Command Line Arguments Parser
 
 Clipper is a small wrapper around the standard `OptionParser` with these 
 conceptual changes:
@@ -17,23 +16,21 @@ Clipper does not assume anything about how you wish to build your command
 line utility, or how you wish to display its usage.
 
 
-Installation
----------------------------------------------------
+## Installation
 
 
-1. Add the dependency to your `shard.yml`:
+Add the dependency to your `shard.yml`:
 
 ```yaml
 dependencies:
- clipper:
-   github: dannyben/clipper
+  clipper:
+    github: dannyben/clipper
 ```
 
-2. Run `shards install`
+Then run `shards install`
 
 
-Usage
---------------------------------------------------
+## Usage
 
 Clipper contains three methods only:
 
@@ -59,16 +56,16 @@ clipper.arg "command"
 
 # Finally, parse the options:
 options = clipper.parse
-#=> {"--cache" => false, "--long-only" => false, 
-#=>  "--port" => "3000", "command" => false}
+# => {"--cache" => false, "--long-only" => false, 
+# =>  "--port" => "3000", "command" => false}
 
 options = clipper.parse ["--cache", "-p", "4567"]
-#=> {"--cache" => true, "--long-only" => false,
-#=>  "--port" => "4567", "command" => false}
+# => {"--cache" => true, "--long-only" => false,
+# =>  "--port" => "4567", "command" => false}
 
 options = clipper.parse ["download"]
-#=> {"--cache" => true, "--long-only" => false,
-#=>  "--port" => "4567", "command" => "download"}
+# => {"--cache" => true, "--long-only" => false,
+# =>  "--port" => "4567", "command" => "download"}
 ```
 
 For more advanced examples, see the examples folder.
