@@ -1,5 +1,7 @@
 # Clipper - Pure Command Line Arguments Parser
 
+[![Build Status](https://travis-ci.com/DannyBen/clipper.svg?branch=master)](https://travis-ci.com/DannyBen/clipper)
+
 Clipper is a small wrapper around the standard `OptionParser` with these 
 conceptual changes:
 
