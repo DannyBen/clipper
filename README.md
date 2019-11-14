@@ -70,7 +70,6 @@ options = clipper.parse ["download"]
 # =>  "--port" => "4567", "command" => "download"}
 ```
 
-For more advanced examples, see the [examples folder][examples].
-
-[examples]: https://github.com/DannyBen/clipper/tree/master/examples
+For more advanced examples, see the
+[examples folder](https://github.com/DannyBen/clipper/tree/master/examples).
 
